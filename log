@@ -25,3 +25,13 @@ Wed, Apr 30, 2025  9:36:27 AM:
  tests:  2|8
 total_score: 0/70
 c4c422b
+Wed, Apr 30, 2025  9:36:56 AM: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:4:0:
+treemap.c: In function 'createTreeMap':
+treemap.c:42:5: error: expected ';' before 'new'
+     new->current = NULL
+     ^~~
+f57b483
