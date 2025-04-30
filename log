@@ -88,3 +88,17 @@ treemap.c:75:40: error: dereferencing 'void *' pointer [-Werror]
 treemap.c:75:40: error: void value not ignored as it ought to be
 cc1.exe: all warnings being treated as errors
 7713b74
+Wed, Apr 30, 2025  9:48:34 AM: 
+ treemap.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+Compilation failed
+In file included from test.c:4:0:
+treemap.c: In function 'searchTreeMap':
+treemap.c:74:33: error: comparison of distinct pointer types lacks a cast [-Werror]
+         if (tree->current->left <key) tree->current=tree->current->right;
+                                 ^
+treemap.c:75:39: error: comparison of distinct pointer types lacks a cast [-Werror]
+         else if (tree->current->right <key) tree->current=tree->current->left;
+                                       ^
+cc1.exe: all warnings being treated as errors
+3115844
