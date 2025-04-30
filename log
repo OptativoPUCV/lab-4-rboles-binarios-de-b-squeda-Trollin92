@@ -102,3 +102,9 @@ treemap.c:75:39: error: comparison of distinct pointer types lacks a cast [-Werr
                                        ^
 cc1.exe: all warnings being treated as errors
 3115844
+Wed, Apr 30, 2025  9:49:41 AM: 
+ treemap.c | 13 ++++++++-----
+ 1 file changed, 8 insertions(+), 5 deletions(-)
+ tests:  4|7
+total_score: 5/70
+4bd496a
