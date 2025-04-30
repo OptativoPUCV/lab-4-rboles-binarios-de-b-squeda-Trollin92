@@ -2,3 +2,14 @@ Wed, Apr 30, 2025  9:15:10 AM:
  tests:  1|8
 total_score: 0/70
 5729e4d
+Wed, Apr 30, 2025  9:35:25 AM: 
+ treemap.c | 10 ++++++++--
+ 1 file changed, 8 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:4:0:
+test.c: In function 'createTreeMap':
+treemap.c:41:15: error: 'new' is used uninitialized in this function [-Werror=uninitialized]
+     new->root = (TreeNode *) malloc(sizeof(TreeNode));
+     ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+e1aa18b
