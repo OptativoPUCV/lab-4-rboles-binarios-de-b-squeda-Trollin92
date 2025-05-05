@@ -251,3 +251,18 @@ test.c:6:8: warning: '_strdup' redeclared without dllimport attribute: previous 
     6 | char * _strdup(const char * str) {
       |        ^~~~~~~
 8996d9e
+Sun, May  4, 2025 11:31:25 PM: 
+ treemap.c | 15 +++++++++------
+ 1 file changed, 9 insertions(+), 6 deletions(-)
+Compilation failed
+In file included from test.c:4:
+treemap.c:156:8: error: redefinition of 'nextTreeMap'
+  156 | Pair * nextTreeMap(TreeMap * tree) {
+      |        ^~~~~~~~~~~
+treemap.c:152:8: note: previous definition of 'nextTreeMap' with type 'Pair *(TreeMap *)'
+  152 | Pair * nextTreeMap(TreeMap * tree) {
+      |        ^~~~~~~~~~~
+test.c:6:8: warning: '_strdup' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+    6 | char * _strdup(const char * str) {
+      |        ^~~~~~~
+25f16e3
