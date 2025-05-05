@@ -149,9 +149,6 @@ Pair * firstTreeMap(TreeMap * tree) {
     return aux->pair;
 }
 
-Pair * nextTreeMap(TreeMap * tree) {
-    return NULL;
-}
 
 Pair * nextTreeMap(TreeMap * tree) {
     if (tree->current == NULL) return NULL;
