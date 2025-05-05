@@ -217,3 +217,23 @@ Sun, May  4, 2025 11:21:43 PM:
  tests:  24|1
 total_score: 55/70
 775ad53
+Sun, May  4, 2025 11:30:12 PM: 
+ treemap.c | 21 +++++++++++++++++++++
+ 1 file changed, 21 insertions(+)
+Compilation failed
+In file included from test.c:4:
+treemap.c:156:8: error: redefinition of 'nextTreeMap'
+  156 | Pair * nextTreeMap(TreeMap * tree) {
+      |        ^~~~~~~~~~~
+treemap.c:152:8: note: previous definition of 'nextTreeMap' with type 'Pair *(TreeMap *)'
+  152 | Pair * nextTreeMap(TreeMap * tree) {
+      |        ^~~~~~~~~~~
+treemap.c: In function 'nextTreeMap':
+treemap.c:162:16: error: returning 'TreeNode *' from a function with incompatible return type 'Pair *' [-Wincompatible-pointer-types]
+  162 |         return aux;
+      |                ^~~
+test.c: At top level:
+test.c:6:8: warning: '_strdup' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+    6 | char * _strdup(const char * str) {
+      |        ^~~~~~~
+5a3bc30
