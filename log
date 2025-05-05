@@ -272,3 +272,43 @@ Sun, May  4, 2025 11:32:03 PM:
  tests:  29|0
 total_score: 70/70
 6193381
+Sun, May  4, 2025 11:33:44 PM: 
+ treemap.c | 17 +++++++++--------
+ 1 file changed, 9 insertions(+), 8 deletions(-)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function 'nextTreeMap':
+treemap.c:154:20: error: invalid initializer
+  154 |     TreeNode aux = tree->current;
+      |                    ^~~~
+treemap.c:155:13: error: invalid operands to binary == (have 'TreeNode' and 'void *')
+  155 |     if (aux == NULL) return NULL;
+      |             ^~
+treemap.c:157:12: error: invalid type argument of '->' (have 'TreeNode')
+  157 |     if (aux->right != NULL) {
+      |            ^~
+treemap.c:158:40: error: invalid type argument of '->' (have 'TreeNode')
+  158 |         TreeNode *minNode = minimum(aux->right);
+      |                                        ^~
+treemap.c:159:15: error: incompatible types when assigning to type 'TreeNode' from type 'TreeNode *'
+  159 |         aux = minNode;
+      |               ^~~~~~~
+treemap.c:163:27: error: invalid type argument of '->' (have 'TreeNode')
+  163 |     TreeNode *parent = aux->parent;
+      |                           ^~
+treemap.c:164:34: error: invalid operands to binary == (have 'TreeNode' and 'TreeNode *')
+  164 |     while (parent != NULL && aux == parent->right) {
+      |                                  ^~ ~~~~~~~~~~~~~
+      |                                           |
+      |                                           TreeNode *
+treemap.c:165:15: error: incompatible types when assigning to type 'TreeNode' from type 'TreeNode *'
+  165 |         aux = parent;
+      |               ^~~~~~
+treemap.c:169:11: error: incompatible types when assigning to type 'TreeNode' from type 'TreeNode *'
+  169 |     aux = parent;
+      |           ^~~~~~
+test.c: At top level:
+test.c:6:8: warning: '_strdup' redeclared without dllimport attribute: previous dllimport ignored [-Wattributes]
+    6 | char * _strdup(const char * str) {
+      |        ^~~~~~~
+8e9c53e
