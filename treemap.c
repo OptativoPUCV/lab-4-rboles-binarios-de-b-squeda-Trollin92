@@ -120,7 +120,24 @@ Pair* searchTreeMap(TreeMap* tree, void* key) {
 }
 
 Pair * upperBound(TreeMap * tree, void* key) {
-    
+    TreeNode * current = tree->root;
+    TreeNode * candidato = NULL;
+    while(current != NULL){
+        if (is_equal(tree, current->pair->key, key)) {
+            tree->current = current;
+            return current->pair;
+        }
+        if (!tree->lower_than(current->pair->key, key)) {
+            candidato = current;
+            current = current->left;
+        } else {
+            current = current->right;
+        } 
+    }
+    if (candidato != NULL) {
+        tree->current = candidato;
+        return candidato->pair;
+    }
     return NULL;
 }
 
