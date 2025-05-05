@@ -150,3 +150,18 @@ Wed, Apr 30, 2025  9:57:27 AM:
  tests:  18|3
 total_score: 40/70
 fb39d96
+Sun, May  4, 2025 10:47:37 PM: 
+ treemap.c | 11 +++++------
+ 1 file changed, 5 insertions(+), 6 deletions(-)
+Compilation failed
+In file included from test.c:4:
+treemap.c: In function 'upperBound':
+treemap.c:123:16: error: unused variable 'aBuscar' [-Werror=unused-variable]
+  123 |     TreeNode * aBuscar;
+      |                ^~~~~~~
+test.c: At top level:
+test.c:6:8: error: '_strdup' redeclared without dllimport attribute: previous dllimport ignored [-Werror=attributes]
+    6 | char * _strdup(const char * str) {
+      |        ^~~~~~~
+cc1.exe: all warnings being treated as errors
+dc3f5f9
