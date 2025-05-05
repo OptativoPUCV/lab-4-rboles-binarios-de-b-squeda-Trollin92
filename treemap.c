@@ -120,10 +120,7 @@ Pair* searchTreeMap(TreeMap* tree, void* key) {
 }
 
 Pair * upperBound(TreeMap * tree, void* key) {
-    TreeNode * aBuscar;
-    searchTreeMap(tree, key);
-    if (tree->current == NULL) return NULL;
-
+    
     return NULL;
 }
 
